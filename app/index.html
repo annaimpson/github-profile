@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Github Profile</title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="../dist/images/GitHub-Mark-32px.png" alt="">
+      </div>
+      <div class="form-group">
+        <input type="search-tab" class="form-control" id="search-button">
+      </div>
+      <nav class="pull-gist-issues">
+        <span>Pull request</span>
+        <span>Issues</span>
+        <span>Gist</span>
+      </nav>
+      <div class="nav-buttons">
+        <button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-3 sidebar">
+          <div class="row">
+
+            <div class="col-md-12 profile-picture">
+              <img src="../dist/images/IMG_1265.jpg" alt="">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="name">Anna Impson</h3>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <h6 class="username">annaimpson</h6>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <div class= "my-info">
+                <div class="US">
+                  <button type="button" class="btn btn-default btn-sm map-button">
+                    <div class="glyphicon glyphicon-map-marker" aria-hidden="true"></div>
+                  </button>
+                  <div class="location">United States</div>
+                </div>
+                <div class="my-email">
+                  <button type="button" class="btn btn-default btn-sm envelope-button">
+                    <div class="glyphicon glyphicon-envelope" aria-hidden="true"></div>
+                  </button>
+                  <div class="email">annaimpson@gmail.com</div>
+                </div>
+                <div class="when-joined">
+                  <button type="button" class="btn btn-default btn-sm time-button">
+                    <div class="glyphicon glyphicon-time" aria-hidden="true"></div>
+                  </button>
+                  <div class="join-date">Joined on Feb 3, 2015</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <div class="number-description">
+                <div class="js-followers"></div>
+              </div>
+            </div>
+          </div>
+                    <!-- Place numbers for follers here -->
+
+            <div class="row">
+              <div class="col-md-3">
+                <div class="followers">
+                  <span class="follow">Followers</span>
+                  <span class="starred">Starred</span>
+                  <span class="following">Following</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <h3 class="organizations">Organizations</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="js-organ-pics"></div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+      <div class="col-md-9 page-body">
+          <div class="row">
+            <div class="top-tabs">
+              <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a href="#">Contributions</a>
+                  <button type="button" class="btn btn-default btn-xs plus-sign-button">
+                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                  </button>
+                </li>
+                <li role="presentation" class="repos"><a href="#"><span class="glyphicon glyphicon-book" aria-hidden="true">Repositories</span></a></li>
+                <li role="presentation"><a href="#"><span class="glyphicon glyphicon-grain" aria-hidden="true">Public Activity</span></a></li>
+              </ul>
+            </div>
+            <div class="edit-profile">
+              <button><span class="glyphicon glyphicon-grain" aria-hidden="true">Edit Profile</span></button>
+            </div>
+          </div>
+          <div class="row nav-minor">
+            <div class="nav-search">
+              <input type="search-tab" class="form-control2" id="search-button-nav">
+              <button type="submit" class="btn btn-default">Search</button>
+            </div>
+            <div class="action-nav">
+              <span class="all">All</span>
+              <span class="public">Public</span>
+              <span class="private">Private</span>
+              <span class="sources">Sources</span>
+              <span class="forks">Forks</span>
+              <span class="mirrors">Mirrors</span>
+            </div>
+            <div class="nav-button">
+              <button><span class="glyphicon glyphicon-book new-button" aria-hidden="true">New</span></button>
+            </div>
+          </div>
+          <div class="repo-space"></div>
+        </div>
+
+    </div>
+
+
+
+    <script id="followers-template" type="text/x-handlebars-template">
+      <div class="my-followers">
+        <h5 class ="followers">{{Followers}}</h5>
+        <h5 class ="starred">{{Starred}}</h5>
+        <h5 class ="following">{{Following}}</h5>
+      </div>
+    </script>
+    <script id="repo-template" type="text/x-handlebars-template">
+      <div class="body-wrapper">
+        <div class="name-updated">
+          <h1 class="body-name">{{name}}</h1>
+          <h6 class="body-updated">{{updated}}</h6>
+        </div>
+        <div class="stars-forks">
+          <h6 class="body-lang">{{language}}</h6>
+          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <h6 class="body-stars">{{stargazersCount}}</h6>
+          <img class="branch" src="../dist/images/branch.png" alt="">
+          <h6 class="body-forks">{{forks}}</h6>
+
+
+        </div>
+      </div>
+     </script>
+  </div>
+
+    <script src="js/bundle.js"></script>
+
+  </body>
+</html>
