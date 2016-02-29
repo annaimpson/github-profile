@@ -4,7 +4,7 @@ var _ = require('underscore');
 console.log(handlebars);
 var urlPage = 'https://api.github.com/users/annaimpson';
 var urlRepo = 'https://api.github.com/users/annaimpson/repos';
-var token = require('./githubtoken.js').token;
+// var token = ('./githubtoken.js').token;
 var context;
 
 console.log(urlRepo);
