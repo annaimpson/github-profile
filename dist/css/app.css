@@ -5866,17 +5866,37 @@ header {
   display: inline-block;
   margin-left: 20px; }
 
+.pull-request,
+.issues,
+.gist {
+  font-weight: bold;
+  font-size: 13px;
+  margin-left: 10px; }
+
 .nav-buttons {
   float: right;
   margin-top: 25px;
   margin-right: 250px;
   border: none; }
 
+.bell,
+.plus,
+.triangle {
+  border: none;
+  background-color: whitesmoke; }
+
+.small-profile {
+  width: 25px;
+  height: 25px; }
+
 .profile-picture {
   width: 268px;
   height: 245px;
   text-align: center;
   margin-top: 25px; }
+
+.profile-pic {
+  border-radius: 6%; }
 
 .username {
   font-size: 18px;
@@ -5894,13 +5914,19 @@ header {
 .map-button,
 .envelope-button,
 .time-button {
-  display: inline-block; }
+  display: inline-block;
+  border: none;
+  color: grey; }
 
 .edit-profile {
   font-family: times;
   display: inline-block;
   float: right;
   margin-top: -40px; }
+
+.grain-edit {
+  font-weight: bold;
+  font-family: sans-serif; }
 
 .form-control2 {
   display: inline-block;
@@ -5914,6 +5940,16 @@ header {
   display: inline-block;
   text-align: center;
   margin-left: 20px; }
+
+.contributions,
+.repos,
+.activity {
+  font-family: helvetica; }
+
+.contributions,
+.repositories,
+.activity {
+  display: inline-block; }
 
 .all,
 .public,
@@ -5935,7 +5971,10 @@ header {
   color: #3e77c6; }
 
 .new-button {
-  background-color: green; }
+  background-color: #68b630;
+  border: none;
+  border-radius: 6%;
+  color: white; }
 
 .nav-button {
   display: inline-block;
@@ -5952,7 +5991,8 @@ header {
 
 .stars-forks {
   float: right;
-  display: inline-block; }
+  display: inline-block;
+  color: grey; }
 
 .name-updated {
   display: inline-block; }
@@ -5964,8 +6004,7 @@ header {
 
 .branch {
   width: 10px;
-  height: 10px;
-  color: lightgrey; }
+  height: 10px; }
 
 .body-name {
   color: #3e77c6;

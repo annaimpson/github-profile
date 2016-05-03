@@ -5,8 +5,8 @@ var urlPage = 'https://api.github.com/users/annaimpson';
 var urlRepo = 'https://api.github.com/users/annaimpson/repos';
 // var token = require('./githubtoken.js').token;
 var context;
+var context2;
 
-console.log(urlRepo);
 
 if (typeof (githubtoken) !== 'undefined') {
   $.ajaxSetup({
@@ -20,9 +20,27 @@ function start(data){
 $.ajax(urlPage).then(start);
 
 
-var source = $('#repo-template').html();
-var template = handlebars.compile(source);
+
+function myFollowers(){
+  var source2 = $('#followers-template').html();
+  var template2 = handlebars.compile(source2);
+  function repnum(data){
+    console.log(data);
+    _.each(data, function(element){
+      context2 = {
+        followers: element.followers,
+        starred: element.starred_url,
+        following: element.following,
+      };
+      $('.js-followers').append(template(context2));
+    });
+  }
+  $.ajax(urlPage).then(repnum);
+}
+
 function myRepos(){
+  var source = $('#repo-template').html();
+  var template = handlebars.compile(source);
   function repfunc(data){
     console.log(data);
     _.each(data, function(element){
@@ -39,20 +57,3 @@ function myRepos(){
   $.ajax(urlRepo).then(repfunc);
 }
 $('.repos').click(myRepos);
-
-function myFollowers(){
-  source = $('#followers-template').html();
-  template = handlebars.compile(source);
-  function repnum(data){
-    console.log(data);
-    _.each(data, function(element){
-      context = {
-        Followers: element.followers,
-        Starred: element.starred_url,
-        Following: element.following,
-      };
-      $('.js-followers').append(template(context));
-    });
-  }
-  $.ajax(urlPage).then(repnum);
-}
