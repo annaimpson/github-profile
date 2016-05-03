@@ -16,22 +16,23 @@
         <input type="search-tab" class="form-control" id="search-button">
       </div>
       <nav class="pull-gist-issues">
-        <span>Pull request</span>
-        <span>Issues</span>
-        <span>Gist</span>
+        <span class="pull-request"><a>Pull request</a></span>
+        <span class="issues"><a>Issues</a></span>
+        <span class="gist"><a>Gist</a></span>
       </nav>
       <div class="nav-buttons">
-        <button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+        <button type="button" class="btn btn-default btn-sm bell">
+          <span class="glyphicon glyphicon-bell bell" aria-hidden="true"></span>
         </button>
-        <button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        <button type="button" class="btn btn-default btn-sm plus">
+          <span class="glyphicon glyphicon-plus plus" aria-hidden="true"></span>
         </button>
-        <button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+        <button type="button" class="btn btn-default btn-sm triangle">
+          <span class="glyphicon glyphicon-triangle-bottom triangle" aria-hidden="true"></span>
         </button>
-        <button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+        <img class = "small-profile" src="images/IMG_1265.jpg" alt="">
+        <button type="button" class="btn btn-default btn-sm triangle">
+          <span class="glyphicon glyphicon-triangle-bottom triangle" aria-hidden="true"></span>
         </button>
       </div>
     </header>
@@ -45,7 +46,7 @@
           <div class="row">
 
             <div class="col-md-12 profile-picture">
-              <img src="../dist/images/IMG_1265.jpg" alt="">
+              <img src="../dist/images/IMG_1265.jpg" alt="" class="profile-pic">
             </div>
           </div>
 
@@ -74,7 +75,7 @@
                   <button type="button" class="btn btn-default btn-sm envelope-button">
                     <div class="glyphicon glyphicon-envelope" aria-hidden="true"></div>
                   </button>
-                  <div class="email">annaimpson@gmail.com</div>
+                  <a class="email">annaimpson@gmail.com</a>
                 </div>
                 <div class="when-joined">
                   <button type="button" class="btn btn-default btn-sm time-button">
@@ -126,17 +127,30 @@
           <div class="row">
             <div class="top-tabs">
               <ul class="nav nav-tabs">
-                <li role="presentation" class="active"><a href="#">Contributions</a>
-                  <button type="button" class="btn btn-default btn-xs plus-sign-button">
-                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
-                  </button>
+                <li role="presentation" class="active">
+                  <a href="#">
+                    <span class="glyphicon glyphicon-plus-sign plus-sign" aria-hidden="true"></span>
+                    <h6 class="contributions">Contributions</h6>
+                  </a>
                 </li>
-                <li role="presentation" class="repos"><a href="#"><span class="glyphicon glyphicon-book" aria-hidden="true">Repositories</span></a></li>
-                <li role="presentation"><a href="#"><span class="glyphicon glyphicon-grain" aria-hidden="true">Public Activity</span></a></li>
+                <li role="presentation" class="repos">
+                  <a href="#">
+                    <span class="glyphicon glyphicon-book book" aria-hidden="true"></span>
+                    <h6 class="repositories">Repositories</h6>
+                  </a>
+                </li>
+                <li role="presentation" class="activity">
+                  <a href="#">
+                    <span class="glyphicon glyphicon-grain grain" aria-hidden="true"></span>
+                    <h6 class="activity">Public Activity</h6>
+                  </a>
+                </li>
               </ul>
             </div>
             <div class="edit-profile">
-              <button><span class="glyphicon glyphicon-grain" aria-hidden="true">Edit Profile</span></button>
+              <button>
+                <span class="glyphicon glyphicon-grain grain-edit" aria-hidden="true">Edit Profile</span>
+              </button>
             </div>
           </div>
           <div class="row nav-minor">
@@ -145,15 +159,17 @@
               <button type="submit" class="btn btn-default">Search</button>
             </div>
             <div class="action-nav">
-              <span class="all">All</span>
-              <span class="public">Public</span>
-              <span class="private">Private</span>
-              <span class="sources">Sources</span>
-              <span class="forks">Forks</span>
-              <span class="mirrors">Mirrors</span>
+              <span class="all"><a>All</a></span>
+              <span class="public"><a>Public</a></span>
+              <span class="private"><a>Private</a></span>
+              <span class="sources"><a>Sources</a></span>
+              <span class="forks"><a>Forks</a></span>
+              <span class="mirrors"><a>Mirrors</a></span>
             </div>
             <div class="nav-button">
-              <button><span class="glyphicon glyphicon-book new-button" aria-hidden="true">New</span></button>
+              <button class="new-button">
+                <span class="glyphicon glyphicon-book new-button" aria-hidden="true">New</span>
+              </button>
             </div>
           </div>
           <div class="repo-space"></div>
@@ -165,9 +181,9 @@
 
     <script id="followers-template" type="text/x-handlebars-template">
       <div class="my-followers">
-        <h5 class ="followers">{{Followers}}</h5>
-        <h5 class ="starred">{{Starred}}</h5>
-        <h5 class ="following">{{Following}}</h5>
+        <h5 class="followers">{{followers}}</h5>
+        <h5 class="starred">{{starred}}</h5>
+        <h5 class="following">{{following}}</h5>
       </div>
     </script>
     <script id="repo-template" type="text/x-handlebars-template">
@@ -180,13 +196,12 @@
           <h6 class="body-lang">{{language}}</h6>
           <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
           <h6 class="body-stars">{{stargazersCount}}</h6>
-          <img class="branch" src="../dist/images/branch.png" alt="">
+          <img class="branch" src="images/branch.png" alt="">
           <h6 class="body-forks">{{forks}}</h6>
-
-
         </div>
       </div>
      </script>
+
   </div>
 
     <script src="js/bundle.js"></script>
