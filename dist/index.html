@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>Github Profile</title>
-
     <link rel="stylesheet" href="css/app.css">
   </head>
-  <body>
-    <header>
+
+
+  <header>
+    <div class="container-fluid">
       <div class="logo">
         <img src="../dist/images/GitHub-Mark-32px.png" alt="">
       </div>
@@ -16,10 +17,11 @@
         <input type="search-tab" class="form-control" id="search-button">
       </div>
       <nav class="pull-gist-issues">
-        <span class="pull-request"><a>Pull request</a></span>
-        <span class="issues"><a>Issues</a></span>
-        <span class="gist"><a>Gist</a></span>
+        <span class="pull-request"><a href="https://github.com/pulls">Pull request</a></span>
+        <span class="issues"><a href="https://github.com/issues">Issues</a></span>
+        <span class="gist"><a href="https://gist.github.com/">Gist</a></span>
       </nav>
+
       <div class="nav-buttons">
         <button type="button" class="btn btn-default btn-sm bell">
           <span class="glyphicon glyphicon-bell bell" aria-hidden="true"></span>
@@ -27,113 +29,36 @@
         <button type="button" class="btn btn-default btn-sm plus">
           <span class="glyphicon glyphicon-plus plus" aria-hidden="true"></span>
         </button>
-        <button type="button" class="btn btn-default btn-sm triangle">
-          <span class="glyphicon glyphicon-triangle-bottom triangle" aria-hidden="true"></span>
+        <button type="button" class="btn btn-default btn-sm triangle-plus">
+          <span class="glyphicon glyphicon-triangle-bottom triangle-plus" aria-hidden="true"></span>
         </button>
-        <img class = "small-profile" src="images/IMG_1265.jpg" alt="">
-        <button type="button" class="btn btn-default btn-sm triangle">
+        <div class = "small-profile"></div>
+        <button type="button" class="btn btn-default btn-sm triangle-photo">
           <span class="glyphicon glyphicon-triangle-bottom triangle" aria-hidden="true"></span>
         </button>
       </div>
-    </header>
+    </div>
+  </header>
 
+  <body>
 
 
     <div class="container">
       <div class="row">
 
-        <div class="col-md-3 sidebar">
-          <div class="row">
-
-            <div class="col-md-12 profile-picture">
-              <img src="../dist/images/IMG_1265.jpg" alt="" class="profile-pic">
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12">
-              <h3 class="name">Anna Impson</h3>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12">
-              <h6 class="username">annaimpson</h6>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-3">
-              <div class= "my-info">
-                <div class="US">
-                  <button type="button" class="btn btn-default btn-sm map-button">
-                    <div class="glyphicon glyphicon-map-marker" aria-hidden="true"></div>
-                  </button>
-                  <div class="location">United States</div>
-                </div>
-                <div class="my-email">
-                  <button type="button" class="btn btn-default btn-sm envelope-button">
-                    <div class="glyphicon glyphicon-envelope" aria-hidden="true"></div>
-                  </button>
-                  <a class="email">annaimpson@gmail.com</a>
-                </div>
-                <div class="when-joined">
-                  <button type="button" class="btn btn-default btn-sm time-button">
-                    <div class="glyphicon glyphicon-time" aria-hidden="true"></div>
-                  </button>
-                  <div class="join-date">Joined on Feb 3, 2015</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-3">
-              <div class="number-description">
-                <div class="js-followers"></div>
-              </div>
-            </div>
-          </div>
-                    <!-- Place numbers for follers here -->
-
-            <div class="row">
-              <div class="col-md-3">
-                <div class="followers">
-                  <span class="follow">Followers</span>
-                  <span class="starred">Starred</span>
-                  <span class="following">Following</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-3">
-              <h3 class="organizations">Organizations</h3>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-3">
-              <div class="js-organ-pics"></div>
-            </div>
-          </div>
-        </div>
-
-
-
-
-
+        <div class="col-md-3 sidebar"></div> <!-- end of sidebar -->
 
       <div class="col-md-9 page-body">
           <div class="row">
             <div class="top-tabs">
               <ul class="nav nav-tabs">
-                <li role="presentation" class="active">
+                <li role="presentation">
                   <a href="#">
                     <span class="glyphicon glyphicon-plus-sign plus-sign" aria-hidden="true"></span>
                     <h6 class="contributions">Contributions</h6>
                   </a>
                 </li>
-                <li role="presentation" class="repos">
+                <li role="presentation" class="active repos">
                   <a href="#">
                     <span class="glyphicon glyphicon-book book" aria-hidden="true"></span>
                     <h6 class="repositories">Repositories</h6>
@@ -141,15 +66,15 @@
                 </li>
                 <li role="presentation" class="activity">
                   <a href="#">
-                    <span class="glyphicon glyphicon-grain grain" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-signal signal" aria-hidden="true"></span>
                     <h6 class="activity">Public Activity</h6>
                   </a>
                 </li>
               </ul>
             </div>
             <div class="edit-profile">
-              <button>
-                <span class="glyphicon glyphicon-grain grain-edit" aria-hidden="true">Edit Profile</span>
+              <button class="edit-profile">
+                <span class="glyphicon glyphicon-pencil edit-pencil" aria-hidden="true"><div class="edit-profile-box">Edit Profile</div></span>
               </button>
             </div>
           </div>
@@ -168,24 +93,57 @@
             </div>
             <div class="nav-button">
               <button class="new-button">
-                <span class="glyphicon glyphicon-book new-button" aria-hidden="true">New</span>
+                <span class="glyphicon glyphicon-book new-button" aria-hidden="true"><div class="new">New</div></span>
               </button>
             </div>
           </div>
           <div class="repo-space"></div>
         </div>
 
-    </div>
+    </div> <!-- end of large row -->
 
 
+    <script id="small-profile" type="text/x-handlebars-template">
+      <img src="{{avatar_url}}" alt="" class="small-profile"/>
+    </script>
 
-    <script id="followers-template" type="text/x-handlebars-template">
-      <div class="my-followers">
-        <h5 class="followers">{{followers}}</h5>
-        <h5 class="starred">{{starred}}</h5>
-        <h5 class="following">{{following}}</h5>
+    <script id="profile-template" type="text/x-handlebars-template">
+      <a href="#"><img src="{{avatar_url}}" alt="" height="230" width="230" class="profile-picture"/></a>
+      <h1 class="name-login">
+        <p class="name">{{name}}</p>
+        <p class="username">{{login}}</p>
+      </h1>
+
+      <ul class="sideBar-date">
+        <li class="location"><span class="glyphicon glyphicon-map-marker map-marker"></span>
+          {{location}}</li>
+        <li class="email"><a><span class="glyphicon glyphicon-envelope envelope"></span>
+          {{email}}</a></li>
+        <li class="join-date"><span class="glyphicon glyphicon-time time"></span>
+          {{created_at}}</li>
+      </ul>
+      <div class="sideList">
+        <div class="side-list">
+          <a href="https://github.com/{{login}}/followers">
+            <strong>{{followers}}</strong>
+            <span class="my-followers">Followers</span>
+          </a>
+          <a href="https://github.com/stars">
+            <strong>0</strong>
+            <span class="my-starred">Starred</span>
+          </a>
+          <a href="https://github.com/{{login}}/following">
+            <strong>{{following}}</strong>
+            <span class="my-following">Following</span>
+          </a>
+        </div>
+        </div>
+
+      <div class="organizations">
+        <h3><span class="organizations-text">Organizations</span></h3>
       </div>
     </script>
+
     <script id="repo-template" type="text/x-handlebars-template">
       <div class="body-wrapper">
         <div class="name-updated">
@@ -202,7 +160,7 @@
       </div>
      </script>
 
-  </div>
+  </div> <!--end of container -->
 
     <script src="js/bundle.js"></script>
 
