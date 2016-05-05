@@ -5819,21 +5819,27 @@ img {
 
 header {
   background-color: whitesmoke;
-  border-bottom: 1px solid lightgrey; }
+  border-bottom: 1px solid lightgrey;
+  height: 50px; }
+
+.container {
+  padding-left: 94px;
+  padding-right: 107px; }
 
 .form-control {
   display: inline-block;
-  width: 400px;
-  margin-top: 25px;
-  margin-left: 24px; }
+  width: 360px;
+  height: 30px;
+  margin-top: -16px;
+  margin-left: 4px; }
 
 .form-group {
   display: inline-block; }
 
 .logo {
   display: inline-block;
-  margin-top: 25px;
-  margin-left: 250px; }
+  margin-top: 10px;
+  margin-left: 220px; }
 
 .sidebar {
   display: inline-block; }
@@ -5842,14 +5848,26 @@ header {
 .email,
 .join-date {
   display: inline-block;
-  line-height: 27px; }
+  line-height: 27px;
+  margin-left: -42px; }
+
+.join-date {
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 10px;
+  width: 232px; }
+
+.map-marker,
+.time {
+  color: lightgrey; }
 
 .US,
 .my-email,
 .when-joined {
   display: inline-block; }
 
-.followers {
+.my-followers,
+.my-following,
+.my-starred {
   text-align: center;
   margin-top: 100px;
   font-size: 12px;
@@ -5870,43 +5888,93 @@ header {
 .issues,
 .gist {
   font-weight: bold;
+  color: black;
   font-size: 13px;
-  margin-left: 10px; }
+  margin-left: 4px;
+  margin-top: -10px; }
 
 .nav-buttons {
   float: right;
-  margin-top: 25px;
-  margin-right: 250px;
+  margin-top: 9px;
+  margin-right: 207px;
   border: none; }
 
 .bell,
 .plus,
-.triangle {
+.triangle-plus,
+.triangle-photo {
   border: none;
   background-color: whitesmoke; }
 
+.triangle-plus,
+.triangle-photo {
+  margin-left: -10px;
+  width: 20px; }
+
 .small-profile {
   width: 25px;
-  height: 25px; }
+  height: 25px;
+  display: inline-block; }
 
 .profile-picture {
-  width: 268px;
-  height: 245px;
   text-align: center;
-  margin-top: 25px; }
-
-.profile-pic {
+  margin-top: 25px;
   border-radius: 6%; }
+
+.name {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: -14px; }
 
 .username {
   font-size: 18px;
-  color: lightgrey; }
+  color: lightgrey;
+  margin-top: -9px;
+  font-weight: lighter;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 15px; }
 
 .my-info {
   width: 200px; }
 
+.sideList .side-list {
+  margin-left: 10px;
+  margin-top: -3px; }
+  .sideList .side-list a {
+    font-family: Helvetica;
+    width: 50px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 10px 0 5px;
+    text-decoration: none; }
+  .sideList .side-list:hover strong {
+    color: #4078c0;
+    display: inline-block; }
+  .sideList .side-list:hover span {
+    color: #767676; }
+  .sideList .side-list strong {
+    font-size: 28px;
+    display: inline-block; }
+  .sideList .side-list span {
+    text-decoration: none;
+    color: #767676;
+    font-size: 11px; }
+
 .organizations {
-  margin-top: 75px; }
+  margin-top: 2px;
+  border-top: 1px solid lightgrey;
+  width: 232px; }
+
+.organizations-text {
+  font-size: 15px; }
+
+.nav-tabs {
+  margin-top: 18px;
+  margin-left: 10px;
+  height: 37px; }
+
+.nav-tabs .repos a {
+  height: 37px; }
 
 .plus-sign-button,
 .book-button,
@@ -5922,16 +5990,20 @@ header {
   font-family: times;
   display: inline-block;
   float: right;
-  margin-top: -40px; }
+  margin-top: -17px;
+  border-radius: 3px;
+  background: white; }
 
-.grain-edit {
+.edit-profile-box {
   font-weight: bold;
-  font-family: sans-serif; }
+  display: inline-block; }
 
 .form-control2 {
   display: inline-block;
-  width: 300px;
-  margin-top: 10px; }
+  width: 260px;
+  height: 30px;
+  margin-top: 8px;
+  margin-left: 17px; }
 
 .nav-search {
   display: inline-block; }
@@ -5949,7 +6021,8 @@ header {
 .contributions,
 .repositories,
 .activity {
-  display: inline-block; }
+  display: inline-block;
+  margin-top: -1px; }
 
 .all,
 .public,
@@ -5972,9 +6045,19 @@ header {
 
 .new-button {
   background-color: #68b630;
-  border: none;
   border-radius: 6%;
-  color: white; }
+  color: white;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  margin-right: 2px;
+  margin-top: -6px; }
+
+.new {
+  margin-left: 5px;
+  display: inline-block;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 12px; }
 
 .nav-button {
   display: inline-block;

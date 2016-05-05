@@ -15,28 +15,31 @@ if (typeof (githubtoken) !== 'undefined') {
     }
   });
 }
-function start(data){
+
+$.ajax(urlRepo).done(function(data){
+  console.log(data);
+  myRepos(data);
+});
+
+
+
+//bringing in avatar
+function avatarTemplate (data){
+  var source = $('#small-profile').html();
+  var template = handlebars.compile(source);
+  var compiledTemplate = template(data);
+  $('.small-profile').html(compiledTemplate);
 }
-$.ajax(urlPage).then(start);
-
-
-
-function myFollowers(){
-  var source2 = $('#followers-template').html();
-  var template2 = handlebars.compile(source2);
-  function repnum(data){
-    console.log(data);
-    _.each(data, function(element){
-      context2 = {
-        followers: element.followers,
-        starred: element.starred_url,
-        following: element.following,
-      };
-      $('.js-followers').append(template(context2));
-    });
-  }
-  $.ajax(urlPage).then(repnum);
+function sideBar (data){
+  var sourcetwo = $('#profile-template').html();
+  var templatetwo = handlebars.compile(sourcetwo);
+  var compiledTemplatetwo = templatetwo(data);
+  $('.sidebar').html(compiledTemplatetwo);
 }
+$.ajax(urlPage).done(function(data){
+  avatarTemplate(data);
+  sideBar(data);
+});
 
 function myRepos(){
   var source = $('#repo-template').html();
